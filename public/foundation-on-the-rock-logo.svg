@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 760" role="img" aria-labelledby="title desc">
+  <title id="title">Foundation on the Rock</title>
+  <desc id="desc">Faith-based nonprofit logo with a cross, sunburst, mountain foundation, and organization name.</desc>
+  <defs>
+    <linearGradient id="gold" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f8d36a"/>
+      <stop offset="1" stop-color="#b8832e"/>
+    </linearGradient>
+    <linearGradient id="navy" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0c2c4f"/>
+      <stop offset="1" stop-color="#061c35"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="760" fill="transparent"/>
+  <circle cx="450" cy="260" r="205" fill="none" stroke="#0c2c4f" stroke-width="16"/>
+  <g stroke="url(#gold)" stroke-width="8" stroke-linecap="round">
+    <path d="M450 85v122"/><path d="M382 108l47 112"/><path d="M518 108l-47 112"/>
+    <path d="M320 150l88 88"/><path d="M580 150l-88 88"/><path d="M270 225l125 35"/>
+    <path d="M630 225l-125 35"/><path d="M255 310l132-18"/><path d="M645 310l-132-18"/>
+  </g>
+  <path d="M421 198h58v52h52v58h-52v84h-58v-84h-52v-58h52z" fill="url(#gold)" stroke="#fff" stroke-width="5"/>
+  <path d="M180 438l170-160 84 90 62-112 122 168 95-87 120 118-225-57-157 115-177-82z" fill="url(#navy)" stroke="#fff" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M350 278l84 90 62-112 38 52-58 23 42 32-93 20 42-74-70 43z" fill="#f2f4f1" opacity=".9"/>
+  <path d="M618 424l-42-67 42-20 120 118z" fill="#e8ece8" opacity=".9"/>
+  <path d="M74 445c130-54 236-89 319-102" fill="none" stroke="url(#gold)" stroke-width="10" stroke-linecap="round"/>
+  <path d="M826 445c-130-54-236-89-319-102" fill="none" stroke="url(#gold)" stroke-width="10" stroke-linecap="round"/>
+  <path d="M350 468c63-31 156-40 260-15-79-6-151 9-211 50 64-10 111 8 141 42-85-27-154-15-208 35" fill="none" stroke="#fff" stroke-width="16" stroke-linecap="round"/>
+  <text x="450" y="650" text-anchor="middle" font-family="Georgia, serif" font-size="102" fill="#0c2c4f" stroke="#fff" stroke-width="3" paint-order="stroke">FOUNDATION</text>
+  <text x="450" y="715" text-anchor="middle" font-family="Georgia, serif" font-size="52" font-weight="700" fill="url(#gold)" stroke="#fff" stroke-width="2" paint-order="stroke">ON THE ROCK</text>
+</svg>
