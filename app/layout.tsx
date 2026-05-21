@@ -26,8 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <header className="site-header">
           <div className="container header-inner">
             <a className="brand" href="/" aria-label="Foundation on the Rock home">
-              <img src="/foundation-on-the-rock-logo.svg" alt="" aria-hidden="true" />
-              <span><strong>Foundation</strong><small>on the Rock</small></span>
+              <img src="/foundation-on-the-rock-logo.svg" alt="Foundation on the Rock" />
             </a>
             <nav aria-label="Primary navigation">
               {navItems.map(([href, label]) => <a key={href} href={href}>{label}</a>)}
