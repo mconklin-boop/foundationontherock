@@ -10,7 +10,16 @@ export const metadata: Metadata = {
     template: "%s | Foundation on the Rock"
   },
   description:
-    "Foundation on the Rock provides faith-based outreach, mentorship, housing stabilization, workforce development, financial literacy, transitional support, and community care.",
+    "Foundation on the Rock is a Colorado faith-based nonprofit providing Christian outreach, housing stabilization, transitional support services, faith-based mentorship, and community restoration ministry.",
+  keywords: [
+    "Colorado faith-based nonprofit",
+    "Christian outreach organization",
+    "housing stabilization nonprofit",
+    "transitional support services",
+    "faith-based mentorship",
+    "community restoration ministry",
+    "Foundation on the Rock"
+  ],
   openGraph: {
     title: "Foundation on the Rock",
     description:
