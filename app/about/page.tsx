@@ -8,7 +8,7 @@ import { Section } from "@/components/Section";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Learn the story, mission, vision, faith foundation, board leadership, and community restoration heart of Foundation on the Rock."
+    "Learn about Foundation on the Rock, a Colorado faith-based nonprofit focused on Christian outreach, housing stabilization, faith-based mentorship, and community restoration."
 };
 
 const values = [
@@ -24,19 +24,19 @@ const boardMembers = [
   {
     name: "Desiree Conklin",
     title: "President & Community Outreach Director",
-    bio: "Desiree Conklin serves as President of Foundation on the Rock and is passionate about helping individuals and families find hope, healing, and stability through faith-centered support and mentorship. She helps guide community outreach, volunteer coordination, and faith-based support programs.",
+    bio: "Desiree Conklin serves as President and helps guide community outreach, volunteer coordination, and faith-based support. She is passionate about helping individuals and families find hope, healing, and stability through compassionate mentorship.",
     scripture: "Micah 6:8"
   },
   {
     name: "Michael Conklin",
     title: "Treasurer & Strategic Development Director",
-    bio: "Michael Conklin serves as Treasurer and Strategic Development Director. He brings experience in business development, organizational structure, operational planning, and long-term program development. His focus is building sustainable systems that support housing stabilization, mentorship, workforce development, and community restoration.",
+    bio: "Michael Conklin serves as Treasurer and Strategic Development Director, bringing experience in business development, operational planning, and long-term program growth. His focus is building sustainable systems that support stabilization, mentorship, workforce development, and restoration.",
     scripture: "Proverbs 16:3"
   },
   {
     name: "Domingo Cruz",
     title: "Secretary & Community Engagement Coordinator",
-    bio: "Domingo Cruz serves as Secretary and Community Engagement Coordinator. He supports outreach communication, organizational coordination, and relationship-building efforts that help individuals feel supported, valued, and connected.",
+    bio: "Domingo Cruz serves as Secretary and Community Engagement Coordinator. He supports outreach communication, organizational coordination, and relationship-building that helps people feel valued, supported, and connected.",
     scripture: "Galatians 6:2"
   }
 ];
@@ -59,8 +59,9 @@ export default function AboutPage() {
             caring community.
           </p>
           <p>
-            Phase 2 adds more pathways for prayer, volunteering, stories, and
-            community impact while keeping the site simple and easy to update.
+            As our programs grow, we are building more pathways for prayer,
+            volunteering, stories, and community impact while keeping our work
+            clear, steady, and easy to support.
           </p>
         </div>
       </Section>
