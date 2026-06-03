@@ -1,4 +1,105 @@
-export const metadata = { title: "About", description: "Learn the story, mission, values, and leadership of Foundation on the Rock." };
-const values = ["Faith", "Compassion", "Stewardship", "Dignity", "Accountability", "Community"];
-const leaders = [["President", "Desiree Conklin"], ["Treasurer", "Michael Conklin"], ["Secretary", "Domingo Cruz"]];
-export default function AboutPage(){return <><section className="page-hero"><div className="container"><p className="eyebrow">About us</p><h1>The heart behind Foundation on the Rock</h1><p>We believe families and individuals deserve steady support, practical help, and compassionate encouragement when life feels uncertain.</p></div></section><section className="section"><div className="container"><h2>Our Story</h2><p>Foundation on the Rock was created from a desire to stand beside people in difficult seasons with both faith and practical care. The work is grounded in the belief that rebuilding is possible when people are treated with dignity, connected to trustworthy support, and encouraged one step at a time.</p></div></section><section className="section section-soft"><div className="container"><h2>Our Mission</h2><p className="lead">To provide compassionate, faith-centered support that helps people stabilize, rebuild, and move forward with dignity.</p></div></section><section className="section"><div className="container"><h2>Our Values</h2><div className="grid">{values.map(v=><article className="card" key={v}><h3>{v}</h3></article>)}</div></div></section><section className="section section-soft"><div className="container"><h2>Leadership</h2><div className="grid">{leaders.map(([role,name])=><article className="card" key={role}><p className="eyebrow">{role}</p><h3>{name}</h3></article>)}</div></div></section></>}
+import type { Metadata } from "next";
+import { CheckCircle2 } from "lucide-react";
+import { PageHero } from "@/components/PageHero";
+import { Section } from "@/components/Section";
+
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "Learn the story, mission, vision, faith foundation, and leadership heart of Foundation on the Rock."
+};
+
+const values = [
+  "Faith",
+  "Compassion",
+  "Stewardship",
+  "Dignity",
+  "Accountability",
+  "Community"
+];
+
+export default function AboutPage() {
+  return (
+    <>
+      <PageHero
+        eyebrow="About us"
+        title="Restoration begins with a steady foundation"
+        text="Foundation on the Rock exists to help people rebuild with dignity, accountability, faith, stability, and community support."
+      />
+
+      <Section title="Our Story">
+        <div className="prose">
+          <p>
+            Foundation on the Rock was formed with a heart for people walking
+            through difficult transitions. We believe restoration is possible
+            when practical support is paired with faith, consistency, and a
+            caring community.
+          </p>
+          <p>
+            Phase 1 focuses on building a clear public presence, trusted
+            relationships, and program pathways that can grow as partnerships
+            and resources expand.
+          </p>
+        </div>
+      </Section>
+
+      <Section title="Our Mission" className="section--soft">
+        <p className="section-lead">
+          Foundation on the Rock exists to provide faith-based outreach,
+          mentorship, housing stabilization, workforce development, financial
+          literacy, transitional support, and community support for individuals
+          and families rebuilding their future.
+        </p>
+      </Section>
+
+      <Section title="Our Vision">
+        <p className="section-lead">
+          We envision strengthened families, restored hope, and communities
+          where people have access to encouragement, practical tools, and
+          supportive relationships as they rebuild.
+        </p>
+      </Section>
+
+      <Section title="Faith Foundation" className="section--soft">
+        <div className="prose">
+          <p>
+            Our work is rooted in biblical compassion and the belief that every
+            person carries God-given dignity. We aim to serve with humility,
+            wisdom, accountability, and love.
+          </p>
+          <blockquote>
+            &quot;God is our refuge and strength, an ever-present help in
+            trouble.&quot;
+            <cite>Psalm 46:1</cite>
+          </blockquote>
+        </div>
+      </Section>
+
+      <Section title="Our Values">
+        <div className="value-grid">
+          {values.map((value) => (
+            <div className="value-card" key={value}>
+              <CheckCircle2 size={22} aria-hidden="true" />
+              <h3>{value}</h3>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      <Section title="Board / Leadership" className="section--soft">
+        <div className="split-panel">
+          <p>
+            Foundation on the Rock is guided by leadership committed to
+            responsible stewardship, clear communication, and community impact.
+            Additional board and leadership information can be expanded as the
+            organization grows.
+          </p>
+          <div className="leader-card">
+            <p>Phase 1 leadership preview</p>
+            <h3>Service, stewardship, and accountability</h3>
+          </div>
+        </div>
+      </Section>
+    </>
+  );
+}
