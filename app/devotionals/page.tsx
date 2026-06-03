@@ -6,7 +6,7 @@ import { Section } from "@/components/Section";
 export const metadata: Metadata = {
   title: "Devotionals",
   description:
-    "Read devotionals, community stories, testimonies, ministry updates, and faith-based restoration reflections from Foundation on the Rock."
+    "Read Christian devotionals, community stories, testimonies, ministry updates, and faith-based restoration reflections from Foundation on the Rock."
 };
 
 const categories = [
