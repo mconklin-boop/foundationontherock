@@ -1,22 +1,30 @@
+"use client";
+
 export function VolunteerApplicationForm() {
   return (
-    <form className="contact-form">
-      {/* TODO: Connect volunteer applications to a backend, CRM, or form provider before launch. */}
+    <form
+      className="contact-form"
+      onSubmit={(event) => {
+        event.preventDefault();
+        // TODO: Replace this placeholder with the selected production form integration.
+      }}
+    >
+      {/* TODO: Connect volunteer applications using Formspree, a Resend email API route, Google Sheets, Airtable, or CRM integration. */}
       <div className="form-row">
-        <label htmlFor="volunteer-name">Name</label>
-        <input id="volunteer-name" name="name" type="text" placeholder="Your name" />
+        <label htmlFor="volunteer-name">Name required</label>
+        <input id="volunteer-name" name="name" type="text" placeholder="Your name" required />
       </div>
       <div className="form-row">
-        <label htmlFor="volunteer-email">Email</label>
-        <input id="volunteer-email" name="email" type="email" placeholder="you@example.com" />
+        <label htmlFor="volunteer-email">Email required</label>
+        <input id="volunteer-email" name="email" type="email" placeholder="you@example.com" required />
       </div>
       <div className="form-row">
-        <label htmlFor="volunteer-phone">Phone</label>
-        <input id="volunteer-phone" name="phone" type="tel" placeholder="(555) 555-5555" />
+        <label htmlFor="volunteer-phone">Phone required</label>
+        <input id="volunteer-phone" name="phone" type="tel" placeholder="(555) 555-5555" required />
       </div>
       <div className="form-row">
-        <label htmlFor="volunteer-interest">Area of interest</label>
-        <select id="volunteer-interest" name="interest" defaultValue="">
+        <label htmlFor="volunteer-interest">Area of interest required</label>
+        <select id="volunteer-interest" name="interest" defaultValue="" required>
           <option value="" disabled>Choose an area</option>
           <option>Community Outreach</option>
           <option>Mentorship</option>
@@ -27,22 +35,22 @@ export function VolunteerApplicationForm() {
         </select>
       </div>
       <div className="form-row">
-        <label htmlFor="volunteer-availability">Availability</label>
-        <input id="volunteer-availability" name="availability" placeholder="Weekdays, weekends, monthly, etc." />
+        <label htmlFor="volunteer-availability">Availability required</label>
+        <input id="volunteer-availability" name="availability" placeholder="Weekdays, weekends, monthly, etc." required />
       </div>
       <div className="form-row">
         <label htmlFor="volunteer-experience">Relevant experience</label>
         <textarea id="volunteer-experience" name="experience" rows={5} placeholder="Tell us about your background or experience." />
       </div>
       <div className="form-row">
-        <label htmlFor="volunteer-why">Why do you want to serve?</label>
-        <textarea id="volunteer-why" name="why" rows={5} placeholder="Share your heart for serving." />
+        <label htmlFor="volunteer-why">Why do you want to serve? required</label>
+        <textarea id="volunteer-why" name="why" rows={5} placeholder="Share your heart for serving." required />
       </div>
       <label className="checkbox-row">
-        <input type="checkbox" name="consent" />
+        <input type="checkbox" name="consent" required />
         <span>I consent to be contacted about volunteer opportunities.</span>
       </label>
-      <button type="button" className="button button--primary">
+      <button type="submit" className="button button--primary">
         Submit Volunteer Interest
       </button>
     </form>
