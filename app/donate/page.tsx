@@ -4,6 +4,7 @@ import { ButtonLink } from "@/components/ButtonLink";
 import { DonationTierCard } from "@/components/DonationTierCard";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
+import { DONATION_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Donate",
@@ -69,7 +70,7 @@ export default function DonatePage() {
               responsibly and serve consistently as Phase 1 programs grow.
             </p>
             {/* TODO: Replace this placeholder with the approved monthly giving URL. */}
-            <ButtonLink href="#" variant="primary">
+            <ButtonLink href={DONATION_URL} variant="primary">
               Donate Now
             </ButtonLink>
           </article>
@@ -81,7 +82,7 @@ export default function DonatePage() {
               individuals and families pursuing stability and restoration.
             </p>
             {/* TODO: Replace this placeholder with the approved sponsorship URL. */}
-            <ButtonLink href="#" variant="primary">
+            <ButtonLink href={DONATION_URL} variant="primary">
               Donate Now
             </ButtonLink>
           </article>
