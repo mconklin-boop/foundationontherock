@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   BriefcaseBusiness,
   Church,
@@ -68,6 +69,15 @@ export default function Home() {
                 Contact Us
               </ButtonLink>
             </div>
+          </div>
+          <div className="hero__logo-showcase" aria-label="Foundation on the Rock logo">
+            <Image
+              src="/foundation-on-the-rock-logo.svg"
+              alt="Foundation on the Rock"
+              width={720}
+              height={720}
+              priority
+            />
           </div>
         </div>
       </section>
