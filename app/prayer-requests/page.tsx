@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { PrayerRequestForm } from "@/components/PrayerRequestForm";
 import { PageHero } from "@/components/PageHero";
+import { ScriptureBlock } from "@/components/ScriptureBlock";
 import { Section } from "@/components/Section";
 
 export const metadata: Metadata = {
@@ -33,12 +34,12 @@ export default function PrayerRequestsPage() {
       </Section>
 
       <Section className="section--scripture">
-        <blockquote>
-          &quot;Do not be anxious about anything, but in every situation, by
-          prayer and petition, with thanksgiving, present your requests to
-          God.&quot;
-          <cite>Philippians 4:6</cite>
-        </blockquote>
+        <ScriptureBlock
+          verse="Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to God."
+          reference="Philippians 4:6"
+          reflection="We believe prayer is a powerful source of comfort, peace, and strength."
+          variant="soft"
+        />
       </Section>
     </>
   );
