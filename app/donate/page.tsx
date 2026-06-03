@@ -3,6 +3,7 @@ import { CalendarHeart, HeartHandshake } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
 import { DonationTierCard } from "@/components/DonationTierCard";
 import { PageHero } from "@/components/PageHero";
+import { ScriptureBlock } from "@/components/ScriptureBlock";
 import { Section } from "@/components/Section";
 import { DONATION_URL } from "@/lib/site";
 
@@ -53,11 +54,12 @@ export default function DonatePage() {
       </Section>
 
       <Section className="section--scripture">
-        <blockquote>
-          &quot;Each of you should give what you have decided in your heart to
-          give...&quot;
-          <cite>2 Corinthians 9:7</cite>
-        </blockquote>
+        <ScriptureBlock
+          verse="Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver."
+          reference="2 Corinthians 9:7"
+          reflection="Generosity helps create pathways of hope and restoration."
+          variant="gold"
+        />
       </Section>
 
       <Section title="Monthly giving and sponsorship" className="section--soft">
