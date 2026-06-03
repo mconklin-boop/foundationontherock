@@ -3,6 +3,7 @@ import { CheckCircle2 } from "lucide-react";
 import { BoardMemberCard } from "@/components/BoardMemberCard";
 import { CommunityImpact } from "@/components/CommunityImpact";
 import { PageHero } from "@/components/PageHero";
+import { ScriptureBlock } from "@/components/ScriptureBlock";
 import { Section } from "@/components/Section";
 
 export const metadata: Metadata = {
@@ -90,12 +91,16 @@ export default function AboutPage() {
             person carries God-given dignity. We aim to serve with humility,
             wisdom, accountability, and love.
           </p>
-          <blockquote>
-            &quot;God is our refuge and strength, an ever-present help in
-            trouble.&quot;
-            <cite>Psalm 46:1</cite>
-          </blockquote>
         </div>
+      </Section>
+
+      <Section className="section--scripture">
+        <ScriptureBlock
+          verse="He has shown you, O mortal, what is good. And what does the Lord require of you? To act justly and to love mercy and to walk humbly with your God."
+          reference="Micah 6:8"
+          reflection="Our work is rooted in humility, mercy, and faithful service."
+          variant="light"
+        />
       </Section>
 
       <Section title="Our Values">
