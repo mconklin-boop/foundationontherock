@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { DevotionalCard } from "@/components/DevotionalCard";
 import { PageHero } from "@/components/PageHero";
+import { ScriptureBlock } from "@/components/ScriptureBlock";
 import { Section } from "@/components/Section";
 
 export const metadata: Metadata = {
@@ -55,6 +56,15 @@ export default function DevotionalsPage() {
             <span key={category}>{category}</span>
           ))}
         </div>
+      </Section>
+
+      <Section className="section--scripture">
+        <ScriptureBlock
+          verse="May the God of hope fill you with all joy and peace as you trust in him."
+          reference="Romans 15:13"
+          reflection="Our devotionals are written to encourage hope, peace, and renewed faith."
+          variant="soft"
+        />
       </Section>
 
       <Section title="Featured posts" className="section--soft">
