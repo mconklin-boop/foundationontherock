@@ -13,6 +13,7 @@ import { ButtonLink } from "@/components/ButtonLink";
 import { CallToAction } from "@/components/CallToAction";
 import { CommunityImpact } from "@/components/CommunityImpact";
 import { ImpactCard } from "@/components/ImpactCard";
+import { ScriptureBlock } from "@/components/ScriptureBlock";
 import { Section } from "@/components/Section";
 import { DONATION_URL } from "@/lib/site";
 
@@ -91,12 +92,12 @@ export default function Home() {
       </section>
 
       <Section className="section--scripture">
-        <blockquote>
-          &quot;Therefore everyone who hears these words of mine and puts them
-          into practice is like a wise man who built his house on the
-          rock.&quot;
-          <cite>Matthew 7:24</cite>
-        </blockquote>
+        <ScriptureBlock
+          verse="Therefore everyone who hears these words of mine and puts them into practice is like a wise man who built his house on the rock."
+          reference="Matthew 7:24"
+          reflection="A strong foundation begins with faith, wisdom, and obedience."
+          variant="gold"
+        />
       </Section>
 
       <Section eyebrow="Our mission" title="Helping people rebuild their future">
@@ -154,6 +155,14 @@ export default function Home() {
             </span>
           </div>
         </div>
+      </Section>
+
+      <Section className="section--scripture">
+        <ScriptureBlock
+          verse="God is our refuge and strength, an ever-present help in trouble."
+          reference="Psalm 46:1"
+          variant="soft"
+        />
       </Section>
 
       <CallToAction
