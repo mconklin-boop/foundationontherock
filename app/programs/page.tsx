@@ -11,11 +11,12 @@ import { CallToAction } from "@/components/CallToAction";
 import { PageHero } from "@/components/PageHero";
 import { ProgramCard } from "@/components/ProgramCard";
 import { Section } from "@/components/Section";
+import { DONATION_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Programs",
   description:
-    "Explore Phase 1 program areas for Foundation on the Rock, including housing stabilization, outreach, mentorship, workforce development, financial literacy, and faith-based support."
+    "Explore Foundation on the Rock programs for housing stabilization, transitional support services, faith-based mentorship, workforce development, financial literacy, and Christian outreach."
 };
 
 const programs = [
@@ -57,7 +58,7 @@ export default function ProgramsPage() {
       <PageHero
         eyebrow="Programs"
         title="Practical support for lasting restoration"
-        text="Our Phase 1 program areas are designed to grow over time as funding, volunteers, and community partnerships expand."
+        text="Our current program areas are designed to grow over time as funding, volunteers, and community partnerships expand."
       />
 
       <Section title="Program Areas">
@@ -71,7 +72,7 @@ export default function ProgramsPage() {
       <CallToAction
         title="Partner with us as these programs grow."
         text="Your support can help Foundation on the Rock expand practical care, mentorship, stabilization, and faith-based encouragement."
-        primaryHref="/donate"
+        primaryHref={DONATION_URL}
         primaryLabel="Donate Now"
         secondaryHref="/contact"
         secondaryLabel="Contact Us"
