@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import {
   BriefcaseBusiness,
@@ -13,6 +14,13 @@ import { CallToAction } from "@/components/CallToAction";
 import { CommunityImpact } from "@/components/CommunityImpact";
 import { ImpactCard } from "@/components/ImpactCard";
 import { Section } from "@/components/Section";
+import { DONATION_URL } from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: "Foundation on the Rock | Colorado Faith-Based Nonprofit",
+  description:
+    "Foundation on the Rock is a Colorado faith-based nonprofit providing Christian outreach, housing stabilization, transitional support, mentorship, and community restoration."
+};
 
 const programs = [
   {
@@ -62,7 +70,7 @@ export default function Home() {
               future.
             </p>
             <div className="hero__actions">
-              <ButtonLink href="/donate" variant="primary">
+              <ButtonLink href={DONATION_URL} variant="primary">
                 Donate Now
               </ButtonLink>
               <ButtonLink href="/contact" variant="secondary">
@@ -100,11 +108,26 @@ export default function Home() {
         </p>
       </Section>
 
-      <Section eyebrow="Programs" title="Phase 1 areas of service" className="section--soft">
+      <Section eyebrow="Programs" title="Current areas of service" className="section--soft">
         <div className="card-grid card-grid--six">
           {programs.map((item) => (
             <ImpactCard key={item.title} {...item} />
           ))}
+        </div>
+      </Section>
+
+      <Section eyebrow="Stories" title="Future moments from the work">
+        {/* TODO: Replace these placeholders with real community outreach, family support, and volunteer service photos. */}
+        <div className="image-placeholder-grid" aria-label="Future photo areas">
+          <div className="image-placeholder">
+            <span>Community outreach photo</span>
+          </div>
+          <div className="image-placeholder">
+            <span>Family support photo</span>
+          </div>
+          <div className="image-placeholder">
+            <span>Volunteer service photo</span>
+          </div>
         </div>
       </Section>
 
@@ -114,9 +137,9 @@ export default function Home() {
         <div className="split-panel">
           <div>
             <p>
-              Phase 1 is intentionally simple: clear communication, trustworthy
-              community relationships, and a strong foundation for future
-              donations, volunteer applications, prayer requests, and devotionals.
+              Our current foundation is built around clear communication,
+              trustworthy community relationships, and practical pathways for
+              prayer, volunteering, giving, mentorship, and care.
             </p>
           </div>
           <div className="icon-list" aria-label="Leadership commitments">
@@ -136,7 +159,7 @@ export default function Home() {
       <CallToAction
         title="Help Us Build Stronger Foundations"
         text="Your support helps expand outreach, stabilization, mentorship, workforce development, financial literacy, and faith-based community care."
-        primaryHref="/donate"
+        primaryHref={DONATION_URL}
         primaryLabel="Donate Now"
         secondaryHref="/contact"
         secondaryLabel="Contact Us"
