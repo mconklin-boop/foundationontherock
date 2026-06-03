@@ -9,29 +9,29 @@ import { DONATION_URL } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Donate",
   description:
-    "Support restoration and community impact through Foundation on the Rock."
+    "Donate to Foundation on the Rock to support Christian outreach, housing stabilization, transitional support services, faith-based mentorship, and community restoration in Colorado."
 };
 
 const tiers = [
   {
     amount: "$25",
     title: "Community Support",
-    text: "Helps provide basic outreach support and encouragement."
+    text: "Helps provide practical encouragement, prayer care, and neighbor-focused outreach support."
   },
   {
     amount: "$50",
     title: "Outreach Assistance",
-    text: "Supports practical care through community-based outreach."
+    text: "Supports compassionate community outreach through local connection, resource navigation, and care."
   },
   {
     amount: "$100",
     title: "Family Stabilization",
-    text: "Helps families access guidance, support, and stabilizing resources."
+    text: "Helps families pursue stability through guidance, mentorship, and community-based support."
   },
   {
     amount: "$250",
     title: "Housing Support",
-    text: "Contributes to future housing stabilization and transitional support."
+    text: "Strengthens housing stabilization, transitional support, and restoration-focused assistance."
   }
 ];
 
@@ -41,7 +41,7 @@ export default function DonatePage() {
       <PageHero
         eyebrow="Donate"
         title="Support Restoration and Community Impact"
-        text="Your generosity helps support outreach, housing stabilization, mentorship, workforce development, financial literacy, and faith-based community care."
+        text="Your generosity helps strengthen outreach, housing stabilization, mentorship, workforce development, financial literacy, and faith-based community care for individuals and families rebuilding their future."
       />
 
       <Section title="Choose a giving level">
@@ -67,7 +67,8 @@ export default function DonatePage() {
             <h3>Monthly Giving</h3>
             <p>
               Monthly giving provides steady support that helps us plan
-              responsibly and serve consistently as Phase 1 programs grow.
+              responsibly, respond with consistency, and expand care as our
+              programs grow.
             </p>
             {/* TODO: Replace this placeholder with the approved monthly giving URL. */}
             <ButtonLink href={DONATION_URL} variant="primary">
@@ -78,8 +79,9 @@ export default function DonatePage() {
             <HeartHandshake size={28} aria-hidden="true" />
             <h3>Sponsor a Family</h3>
             <p>
-              Sponsor a Family support will help provide focused care for
-              individuals and families pursuing stability and restoration.
+              Sponsorship helps provide focused encouragement, resource
+              guidance, and practical support for families pursuing stability
+              and restoration.
             </p>
             {/* TODO: Replace this placeholder with the approved sponsorship URL. */}
             <ButtonLink href={DONATION_URL} variant="primary">
@@ -89,13 +91,13 @@ export default function DonatePage() {
         </div>
       </Section>
 
-      <Section title="Phase 1 giving note">
+      <Section title="Faithful stewardship">
         <p className="section-lead">
-          Donation buttons are placeholders for now. Payment processing can be
-          connected when the approved giving platform and nonprofit compliance
-          language are ready.
+          Every gift helps strengthen outreach, mentorship, stabilization, and
+          restoration work. We are committed to stewarding support with care,
+          accountability, and clear communication.
         </p>
-        {/* TODO: Add approved nonprofit compliance, tax-deductibility, EIN, and charitable solicitation language here before launch. */}
+        {/* TODO: Connect donation buttons to the approved giving platform and add approved nonprofit compliance, tax-deductibility, EIN, and charitable solicitation language before launch. */}
       </Section>
     </>
   );
