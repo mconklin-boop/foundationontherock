@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
 import { CallToAction } from "@/components/CallToAction";
+import { CommunityImpact } from "@/components/CommunityImpact";
 import { ImpactCard } from "@/components/ImpactCard";
 import { Section } from "@/components/Section";
 
@@ -97,14 +98,15 @@ export default function Home() {
         </div>
       </Section>
 
+      <CommunityImpact />
+
       <Section eyebrow="Trust" title="Grounded in dignity, accountability, and faith">
         <div className="split-panel">
           <div>
             <p>
               Phase 1 is intentionally simple: clear communication, trustworthy
               community relationships, and a strong foundation for future
-              donations, volunteer applications, prayer requests, and
-              devotionals.
+              donations, volunteer applications, prayer requests, and devotionals.
             </p>
           </div>
           <div className="icon-list" aria-label="Leadership commitments">
