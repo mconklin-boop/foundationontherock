@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import { CheckCircle2 } from "lucide-react";
+import { BoardMemberCard } from "@/components/BoardMemberCard";
+import { CommunityImpact } from "@/components/CommunityImpact";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Learn the story, mission, vision, faith foundation, and leadership heart of Foundation on the Rock."
+    "Learn the story, mission, vision, faith foundation, board leadership, and community restoration heart of Foundation on the Rock."
 };
 
 const values = [
@@ -16,6 +18,27 @@ const values = [
   "Dignity",
   "Accountability",
   "Community"
+];
+
+const boardMembers = [
+  {
+    name: "Desiree Conklin",
+    title: "President & Community Outreach Director",
+    bio: "Desiree Conklin serves as President of Foundation on the Rock and is passionate about helping individuals and families find hope, healing, and stability through faith-centered support and mentorship. She helps guide community outreach, volunteer coordination, and faith-based support programs.",
+    scripture: "Micah 6:8"
+  },
+  {
+    name: "Michael Conklin",
+    title: "Treasurer & Strategic Development Director",
+    bio: "Michael Conklin serves as Treasurer and Strategic Development Director. He brings experience in business development, organizational structure, operational planning, and long-term program development. His focus is building sustainable systems that support housing stabilization, mentorship, workforce development, and community restoration.",
+    scripture: "Proverbs 16:3"
+  },
+  {
+    name: "Domingo Cruz",
+    title: "Secretary & Community Engagement Coordinator",
+    bio: "Domingo Cruz serves as Secretary and Community Engagement Coordinator. He supports outreach communication, organizational coordination, and relationship-building efforts that help individuals feel supported, valued, and connected.",
+    scripture: "Galatians 6:2"
+  }
 ];
 
 export default function AboutPage() {
@@ -36,9 +59,8 @@ export default function AboutPage() {
             caring community.
           </p>
           <p>
-            Phase 1 focuses on building a clear public presence, trusted
-            relationships, and program pathways that can grow as partnerships
-            and resources expand.
+            Phase 2 adds more pathways for prayer, volunteering, stories, and
+            community impact while keeping the site simple and easy to update.
           </p>
         </div>
       </Section>
@@ -86,18 +108,13 @@ export default function AboutPage() {
         </div>
       </Section>
 
+      <CommunityImpact />
+
       <Section title="Board / Leadership" className="section--soft">
-        <div className="split-panel">
-          <p>
-            Foundation on the Rock is guided by leadership committed to
-            responsible stewardship, clear communication, and community impact.
-            Additional board and leadership information can be expanded as the
-            organization grows.
-          </p>
-          <div className="leader-card">
-            <p>Phase 1 leadership preview</p>
-            <h3>Service, stewardship, and accountability</h3>
-          </div>
+        <div className="board-grid">
+          {boardMembers.map((member) => (
+            <BoardMemberCard key={member.name} {...member} />
+          ))}
         </div>
       </Section>
     </>
