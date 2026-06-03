@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { ImpactCard } from "@/components/ImpactCard";
 import { PageHero } from "@/components/PageHero";
+import { ScriptureBlock } from "@/components/ScriptureBlock";
 import { Section } from "@/components/Section";
 import { VolunteerApplicationForm } from "@/components/VolunteerApplicationForm";
 
@@ -66,6 +67,15 @@ export default function VolunteerPage() {
             <ImpactCard key={category.title} {...category} />
           ))}
         </div>
+      </Section>
+
+      <Section className="section--scripture">
+        <ScriptureBlock
+          verse="Carry each other's burdens, and in this way you will fulfill the law of Christ."
+          reference="Galatians 6:2"
+          reflection="Serving others is one way we reflect the love of Christ in our community."
+          variant="gold"
+        />
       </Section>
 
       <Section title="Volunteer interest form">
