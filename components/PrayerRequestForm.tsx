@@ -1,22 +1,30 @@
+"use client";
+
 export function PrayerRequestForm() {
   return (
-    <form className="contact-form">
-      {/* TODO: Connect prayer requests to a secure backend or form provider before collecting real submissions. */}
+    <form
+      className="contact-form"
+      onSubmit={(event) => {
+        event.preventDefault();
+        // TODO: Replace this placeholder with the selected production form integration.
+      }}
+    >
+      {/* TODO: Connect prayer requests using Formspree, a Resend email API route, Google Sheets, Airtable, or CRM integration with privacy controls. */}
       <div className="form-row">
-        <label htmlFor="prayer-name">Name</label>
-        <input id="prayer-name" name="name" type="text" placeholder="Your name" />
+        <label htmlFor="prayer-name">Name required</label>
+        <input id="prayer-name" name="name" type="text" placeholder="Your name" required />
       </div>
       <div className="form-row">
-        <label htmlFor="prayer-email">Email</label>
-        <input id="prayer-email" name="email" type="email" placeholder="you@example.com" />
+        <label htmlFor="prayer-email">Email required</label>
+        <input id="prayer-email" name="email" type="email" placeholder="you@example.com" required />
       </div>
       <div className="form-row">
         <label htmlFor="prayer-phone">Phone optional</label>
         <input id="prayer-phone" name="phone" type="tel" placeholder="(555) 555-5555" />
       </div>
       <div className="form-row">
-        <label htmlFor="prayer-message">Prayer request message</label>
-        <textarea id="prayer-message" name="message" rows={7} placeholder="How can we pray with you?" />
+        <label htmlFor="prayer-message">Prayer request message required</label>
+        <textarea id="prayer-message" name="message" rows={7} placeholder="Share what you would like prayer for." required />
       </div>
       <label className="checkbox-row">
         <input type="checkbox" name="urgent" />
@@ -30,7 +38,7 @@ export function PrayerRequestForm() {
         <input type="checkbox" name="private" />
         <span>Submit privately</span>
       </label>
-      <button type="button" className="button button--primary">
+      <button type="submit" className="button button--primary">
         Submit Prayer Request
       </button>
     </form>
