@@ -1,15 +1,134 @@
-const impact = [
-  ["Family Support", "Practical care, encouragement, and next steps for families facing instability or transition."],
-  ["Community Resources", "Connection to trusted local partners, churches, and support services that help meet real needs."],
-  ["Faith-Based Encouragement", "Hope-filled guidance rooted in dignity, compassion, and the belief that rebuilding is possible."]
+import {
+  BriefcaseBusiness,
+  Church,
+  HandHeart,
+  HeartHandshake,
+  HomeIcon,
+  Landmark,
+  WalletCards
+} from "lucide-react";
+import { ButtonLink } from "@/components/ButtonLink";
+import { CallToAction } from "@/components/CallToAction";
+import { ImpactCard } from "@/components/ImpactCard";
+import { Section } from "@/components/Section";
+
+const programs = [
+  {
+    title: "Housing Stabilization",
+    text: "Guidance, support, and community-based resources for individuals and families pursuing stability.",
+    icon: HomeIcon
+  },
+  {
+    title: "Community Outreach",
+    text: "Compassionate outreach and local partnerships that help meet practical needs.",
+    icon: Landmark
+  },
+  {
+    title: "Mentorship & Life Coaching",
+    text: "Encouragement, accountability, and guidance for those navigating transition.",
+    icon: HeartHandshake
+  },
+  {
+    title: "Workforce Development",
+    text: "Job readiness, skill-building, and pathways toward sustainable employment.",
+    icon: BriefcaseBusiness
+  },
+  {
+    title: "Financial Literacy",
+    text: "Budgeting confidence, practical money-management skills, and long-term stewardship.",
+    icon: WalletCards
+  },
+  {
+    title: "Faith-Based Support Services",
+    text: "Prayer, encouragement, discipleship, and spiritual support rooted in biblical truth.",
+    icon: Church
+  }
 ];
 
 export default function Home() {
-  return <>
-    <section className="hero"><div className="container hero-inner"><div><p className="eyebrow">Faith-centered support for real-life rebuilding</p><h1>Helping Families Rebuild on a Stronger Foundation</h1><p>Foundation on the Rock exists to bring practical support, encouragement, and lasting hope to individuals and families walking through difficult seasons.</p><div className="hero-actions"><a className="button button-gold" href="/donate">Donate Now</a><a className="button button-light" href="/get-involved">Get Involved</a></div></div></div></section>
-    <section className="section"><div className="container"><p className="eyebrow">Our mission</p><h2>A stable foundation for the road ahead</h2><p className="lead">To provide compassionate, faith-centered support that helps people stabilize, rebuild, and move forward with dignity.</p></div></section>
-    <section className="section section-soft"><div className="container"><p className="eyebrow">How we help</p><h2>Practical care, rooted in hope</h2><div className="grid">{impact.map(([title,text])=><article className="card" key={title}><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
-    <section className="section"><div className="container split"><div><p className="eyebrow">Leadership</p><h2>Led with service and stewardship</h2><p>Foundation on the Rock is led by a board committed to service, stewardship, and community impact. Our leadership works to build trust with families, donors, churches, and partner organizations through responsible care and clear communication.</p></div><div className="card"><h3>Leadership commitments</h3><p>Compassionate service, sustainable growth, and community partnership.</p></div></div></section>
-    <section className="cta"><div className="container split"><div><h2>Your support helps create real stability for families in need.</h2><p>Every gift helps Foundation on the Rock provide encouragement, practical support, and connection to resources that help people move forward.</p></div><p><a className="button button-gold" href="/donate">Donate Now</a></p></div></section>
-  </>;
+  return (
+    <>
+      <section className="hero">
+        <div className="hero__texture" aria-hidden="true" />
+        <div className="container hero__content">
+          <div className="hero__copy">
+            <p className="eyebrow">Foundation on the Rock</p>
+            <h1>Restoring Lives. Rebuilding Foundations. Strengthening Communities.</h1>
+            <p className="hero__lead">
+              Faith-based outreach, mentorship, housing stabilization, and
+              community support for individuals and families rebuilding their
+              future.
+            </p>
+            <div className="hero__actions">
+              <ButtonLink href="/donate" variant="primary">
+                Donate Now
+              </ButtonLink>
+              <ButtonLink href="/contact" variant="secondary">
+                Contact Us
+              </ButtonLink>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Section className="section--scripture">
+        <blockquote>
+          &quot;Therefore everyone who hears these words of mine and puts them
+          into practice is like a wise man who built his house on the
+          rock.&quot;
+          <cite>Matthew 7:24</cite>
+        </blockquote>
+      </Section>
+
+      <Section eyebrow="Our mission" title="Helping people rebuild their future">
+        <p className="section-lead">
+          Foundation on the Rock exists to provide faith-based outreach,
+          mentorship, housing stabilization, workforce development, financial
+          literacy, transitional support, and community support for individuals
+          and families rebuilding their future.
+        </p>
+      </Section>
+
+      <Section eyebrow="Programs" title="Phase 1 areas of service" className="section--soft">
+        <div className="card-grid card-grid--six">
+          {programs.map((item) => (
+            <ImpactCard key={item.title} {...item} />
+          ))}
+        </div>
+      </Section>
+
+      <Section eyebrow="Trust" title="Grounded in dignity, accountability, and faith">
+        <div className="split-panel">
+          <div>
+            <p>
+              Phase 1 is intentionally simple: clear communication, trustworthy
+              community relationships, and a strong foundation for future
+              donations, volunteer applications, prayer requests, and
+              devotionals.
+            </p>
+          </div>
+          <div className="icon-list" aria-label="Leadership commitments">
+            <span>
+              <HandHeart size={20} /> Restoration with dignity
+            </span>
+            <span>
+              <HeartHandshake size={20} /> Community partnership
+            </span>
+            <span>
+              <Church size={20} /> Faith-centered care
+            </span>
+          </div>
+        </div>
+      </Section>
+
+      <CallToAction
+        title="Help Us Build Stronger Foundations"
+        text="Your support helps expand outreach, stabilization, mentorship, workforce development, financial literacy, and faith-based community care."
+        primaryHref="/donate"
+        primaryLabel="Donate Now"
+        secondaryHref="/contact"
+        secondaryLabel="Contact Us"
+      />
+    </>
+  );
 }
