@@ -1,12 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
+import { contact } from "@/lib/site";
 
 const links = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/programs", label: "Programs" },
   { href: "/donate", label: "Donate" },
+  { href: "/prayer-requests", label: "Prayer Requests" },
+  { href: "/volunteer", label: "Volunteer" },
+  { href: "/devotionals", label: "Devotionals" },
   { href: "/contact", label: "Contact" }
+];
+
+const trustLinks = [
+  { href: "/privacy-policy", label: "Privacy Policy" },
+  { href: "/terms", label: "Terms" },
+  { href: "/donation-disclaimer", label: "Donation Disclaimer" }
 ];
 
 export function Footer() {
@@ -44,9 +54,9 @@ export function Footer() {
         </div>
         <div>
           <h3>Contact</h3>
-          <p>(720) 258-6272</p>
-          <p>desiree@foundationontherock.org</p>
-          <p>foundationontherock.org</p>
+          <p>{contact.phone}</p>
+          <p>{contact.email}</p>
+          <p>{contact.domain}</p>
           <p className="footer__scripture">
             &quot;God is our refuge and strength, an ever-present help in
             trouble.&quot; - Psalm 46:1
@@ -58,11 +68,13 @@ export function Footer() {
       </div>
       <div className="container footer__bottom">
         <p>Copyright {year} Foundation on the Rock. All rights reserved.</p>
-        <p>
-          {/* TODO: Replace this placeholder with approved nonprofit status, EIN, charitable solicitation, and tax language. */}
-          Nonprofit details and tax-deductibility language will be updated when
-          available.
-        </p>
+        <div className="footer__legal">
+          {trustLinks.map((link) => (
+            <Link key={link.href} href={link.href}>
+              {link.label}
+            </Link>
+          ))}
+        </div>
       </div>
     </footer>
   );
