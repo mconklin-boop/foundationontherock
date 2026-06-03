@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ScriptureBlock } from "@/components/ScriptureBlock";
 import { DONATION_URL, contact } from "@/lib/site";
 
 const links = [
@@ -57,10 +58,11 @@ export function Footer() {
           <p>{contact.phone}</p>
           <p>{contact.email}</p>
           <p>{contact.domain}</p>
-          <p className="footer__scripture">
-            &quot;God is our refuge and strength, an ever-present help in
-            trouble.&quot; - Psalm 46:1
-          </p>
+          <ScriptureBlock
+            verse="God is our refuge and strength, an ever-present help in trouble."
+            reference="Psalm 46:1"
+            variant="navy"
+          />
           <Link className="button button--primary footer__donate" href={DONATION_URL}>
             Donate Now
           </Link>
