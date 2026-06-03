@@ -1,6 +1,6 @@
-# Foundation on the Rock Phase 2 Website
+# Foundation on the Rock Website
 
-A polished Phase 2 nonprofit website for Foundation on the Rock, built with Next.js and React.
+A simple, polished nonprofit website for Foundation on the Rock, built with Next.js and React.
 
 Core message: "Restoring Lives. Rebuilding Foundations. Strengthening Communities."
 
@@ -26,6 +26,8 @@ Install dependencies:
 npm install
 ```
 
+This project also includes a `pnpm-lock.yaml`, so `pnpm install` is a good option if you prefer pnpm.
+
 Run the development server:
 
 ```bash
@@ -40,21 +42,24 @@ Build for production:
 npm run build
 ```
 
-## Phase 2 notes
+Start the production build:
 
-- Donation buttons use `DONATION_URL` in `lib/site.ts` and are placeholders until a giving platform is approved.
-- Prayer request and volunteer forms are static placeholders with TODO comments for future backend or form-provider integration.
-- Devotionals are static example posts and can later be connected to a CMS if needed.
-- Community impact metrics live in `components/CommunityImpact.tsx` and are editable placeholders.
-- Legal pages are placeholders and need legal review before public launch.
+```bash
+npm run start
+```
 
-## Update before launch
+## Launch checklist
 
-- Replace `DONATION_URL` in `lib/site.ts` with the approved donation link.
-- Connect forms in `components/ContactForm.tsx`, `components/PrayerRequestForm.tsx`, and `components/VolunteerApplicationForm.tsx`.
-- Update nonprofit compliance language, EIN, tax-deductibility, charitable solicitation language, privacy policy, terms, and donation disclaimer.
-- Confirm phone, email, domain, and any mailing address language.
+- Replace `DONATION_URL` in `lib/site.ts` with the approved live donation or payment link.
+- Connect contact, prayer request, and volunteer forms to the selected backend, form service, CRM, or spreadsheet workflow.
+- Add real community outreach, volunteer service, family support, and devotional/blog photos.
+- Confirm EIN, nonprofit status, tax-deductibility, and charitable solicitation language.
+- Review Privacy Policy, Terms, and Donation Disclaimer with appropriate legal guidance.
+- Confirm phone, email, domain, and any mailing address language in `app/contact/page.tsx` and `components/Footer.tsx`.
+- Confirm the `foundationontherock.org` domain deployment in Vercel.
+- Confirm analytics, privacy settings, and cookie/privacy disclosures if analytics are added.
+- Confirm SEO titles and descriptions for every public page.
 
 ## Design system
 
-The main visual tokens live in `app/globals.css`, including warm white, soft gray, deep navy, muted gold, and forest green accents. Components are intentionally reusable so future donations, prayer requests, volunteer applications, and devotional/blog content can be expanded without redesigning the site.
+The main visual tokens live in `app/globals.css`, including warm white, soft gray, deep navy, muted gold, and forest green accents. Components are intentionally reusable so donations, prayer requests, volunteer applications, and blog/devotional sections can be added later without redesigning the site.
