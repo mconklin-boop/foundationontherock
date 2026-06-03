@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { contact } from "@/lib/site";
+import { DONATION_URL, contact } from "@/lib/site";
 
 const links = [
   { href: "/", label: "Home" },
@@ -61,7 +61,7 @@ export function Footer() {
             &quot;God is our refuge and strength, an ever-present help in
             trouble.&quot; - Psalm 46:1
           </p>
-          <Link className="button button--primary footer__donate" href="/donate">
+          <Link className="button button--primary footer__donate" href={DONATION_URL}>
             Donate Now
           </Link>
         </div>
