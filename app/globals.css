@@ -650,6 +650,49 @@ textarea {
   max-width: 820px;
 }
 
+.jotform-embed {
+  overflow: hidden;
+  min-height: 720px;
+  border: 1px solid rgba(16, 37, 56, 0.1);
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.jotform-embed iframe {
+  display: block;
+  width: 100%;
+  min-height: 720px;
+  border: 0;
+}
+
+.jotform-embed--placeholder {
+  display: grid;
+  align-content: center;
+  gap: 12px;
+  padding: 30px;
+  color: var(--deep-navy);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(243, 238, 228, 0.92)),
+    linear-gradient(45deg, rgba(184, 138, 58, 0.15), rgba(120, 145, 124, 0.16));
+}
+
+.jotform-embed--placeholder h3 {
+  margin: 0;
+  color: var(--deep-navy);
+  font-size: 1.25rem;
+}
+
+.jotform-embed--placeholder p {
+  max-width: 660px;
+  margin: 0;
+  color: var(--muted);
+}
+
+.jotform-embed__note {
+  font-weight: 800;
+}
+
 .form-row {
   display: grid;
   gap: 7px;
