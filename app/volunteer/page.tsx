@@ -15,7 +15,7 @@ import { VolunteerApplicationForm } from "@/components/VolunteerApplicationForm"
 export const metadata: Metadata = {
   title: "Volunteer",
   description:
-    "Serve with Foundation on the Rock through Christian outreach, mentorship, prayer, administration, events, and housing assistance support."
+    "Volunteer with Foundation on the Rock, a Colorado faith-based nonprofit and community restoration ministry serving through Christian outreach, mentorship, prayer, and housing assistance support."
 };
 
 const categories = [
