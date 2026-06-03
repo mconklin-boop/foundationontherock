@@ -6,7 +6,7 @@ import { Section } from "@/components/Section";
 export const metadata: Metadata = {
   title: "Prayer Requests",
   description:
-    "Submit a confidential prayer request to Foundation on the Rock, a Colorado faith-based nonprofit and Christian outreach organization."
+    "Submit a prayer request to Foundation on the Rock, a Colorado faith-based nonprofit offering compassionate Christian outreach, prayer support, and community care."
 };
 
 export default function PrayerRequestsPage() {
