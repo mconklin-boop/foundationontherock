@@ -1,0 +1,7 @@
+export const DONATION_URL = "#";
+
+export const contact = {
+  phone: "(720) 258-6272",
+  email: "desiree@foundationontherock.org",
+  domain: "foundationontherock.org"
+};
