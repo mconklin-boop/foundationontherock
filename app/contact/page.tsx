@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Globe2, Mail, MessagesSquare, Phone } from "lucide-react";
 import { ContactForm } from "@/components/ContactForm";
 import { PageHero } from "@/components/PageHero";
+import { ScriptureBlock } from "@/components/ScriptureBlock";
 import { Section } from "@/components/Section";
 
 export const metadata: Metadata = {
@@ -42,6 +43,15 @@ export default function ContactPage() {
             </p>
           </aside>
         </div>
+      </Section>
+
+      <Section className="section--scripture">
+        <ScriptureBlock
+          verse="Trust in the Lord with all your heart and lean not on your own understanding; in all your ways submit to him, and he will make your paths straight."
+          reference="Proverbs 3:5-6"
+          reflection="Whether you need support, prayer, or partnership, we are here to walk with you."
+          variant="light"
+        />
       </Section>
 
       <Section className="section--soft" title="Partnership and donation inquiries">
