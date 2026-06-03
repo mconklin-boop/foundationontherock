@@ -10,6 +10,7 @@ import {
 import { CallToAction } from "@/components/CallToAction";
 import { PageHero } from "@/components/PageHero";
 import { ProgramCard } from "@/components/ProgramCard";
+import { ScriptureBlock } from "@/components/ScriptureBlock";
 import { Section } from "@/components/Section";
 import { DONATION_URL } from "@/lib/site";
 
@@ -67,6 +68,15 @@ export default function ProgramsPage() {
             <ProgramCard key={program.title} {...program} />
           ))}
         </div>
+      </Section>
+
+      <Section className="section--scripture">
+        <ScriptureBlock
+          verse="The Spirit of the Sovereign Lord is on me, because the Lord has anointed me to proclaim good news to the poor."
+          reference="Isaiah 61:1"
+          reflection="Our programs are designed to bring hope, support, and restoration."
+          variant="soft"
+        />
       </Section>
 
       <CallToAction
