@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ButtonLink } from "@/components/ButtonLink";
+import { DONATION_URL } from "@/lib/site";
 
 const navItems = [
   { href: "/", label: "Home" },
@@ -34,7 +35,7 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <ButtonLink href="/donate" variant="primary" className="header-donate">
+        <ButtonLink href={DONATION_URL} variant="primary" className="header-donate">
           Donate Now
         </ButtonLink>
       </div>
