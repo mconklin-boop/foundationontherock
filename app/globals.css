@@ -26,7 +26,7 @@ button, input, select, textarea { font: inherit; }
 .site-header__inner { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 10px 0; }
 .brand { display: inline-flex; align-items: center; flex: 0 0 auto; color: var(--deep-navy); }
 .brand__logo { width: 138px; height: 96px; object-fit: contain; border-radius: 16px; background: var(--white); box-shadow: 0 8px 18px rgba(16, 37, 56, 0.16); }
-.nav { display: none; align-items: center; gap: 18px; color: var(--deep-navy); font-size: 0.95rem; font-weight: 700; }
+.nav { display: none; align-items: center; gap: 14px; color: var(--deep-navy); font-size: 0.9rem; font-weight: 700; }
 .nav a { padding: 8px 0; }
 .nav a:hover { color: var(--green-dark); }
 .header-donate { display: none; }
@@ -55,11 +55,11 @@ button, input, select, textarea { font: inherit; }
 .section-lead { max-width: 820px; margin: 0; color: var(--navy-soft); font-size: clamp(1.2rem, 2.6vw, 1.65rem); line-height: 1.45; }
 .card-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
 
-.impact-card, .leader-card, .donation-card, .donation-tier-card, .contact-card, .contact-form { border: 1px solid rgba(16, 37, 56, 0.1); border-radius: var(--radius); background: var(--white); box-shadow: var(--shadow); }
+.impact-card, .leader-card, .board-card, .donation-card, .donation-tier-card, .devotional-card, .contact-card, .contact-form { border: 1px solid rgba(16, 37, 56, 0.1); border-radius: var(--radius); background: var(--white); box-shadow: var(--shadow); }
 .impact-card { padding: 28px; }
 .impact-card svg, .donation-card svg, .value-card svg { color: var(--soft-green); }
-.impact-card h3, .program-card h3, .leader-card h3, .donation-card h3, .donation-tier-card h3, .two-column h3 { margin: 14px 0 8px; color: var(--deep-navy); font-size: 1.18rem; line-height: 1.2; }
-.impact-card p, .program-card p, .donation-card p, .donation-tier-card p, .footer p, .prose p, .two-column p { margin: 0; color: var(--muted); }
+.impact-card h3, .program-card h3, .leader-card h3, .board-card h3, .donation-card h3, .donation-tier-card h3, .devotional-card h3, .two-column h3 { margin: 14px 0 8px; color: var(--deep-navy); font-size: 1.18rem; line-height: 1.2; }
+.impact-card p, .program-card p, .board-card p, .donation-card p, .donation-tier-card p, .devotional-card p, .footer p, .prose p, .two-column p { margin: 0; color: var(--muted); }
 .split-panel { display: grid; grid-template-columns: 1fr; gap: 24px; align-items: center; }
 .split-panel p { max-width: 760px; margin: 0; color: var(--muted); font-size: 1.08rem; }
 .icon-list { display: grid; gap: 12px; }
@@ -74,14 +74,23 @@ button, input, select, textarea { font: inherit; }
 .page-hero p:not(.eyebrow) { max-width: 760px; margin: 20px 0 0; color: rgba(255, 255, 255, 0.86); font-size: 1.15rem; }
 .prose { max-width: 850px; }
 .prose p + p { margin-top: 18px; }
-.value-grid, .leader-grid, .donation-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+.value-grid, .leader-grid, .board-grid, .donation-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
 .value-card { display: flex; align-items: center; gap: 12px; padding: 18px; border-radius: 14px; background: var(--white); border: 1px solid rgba(16, 37, 56, 0.09); }
 .value-card h3 { margin: 0; color: var(--deep-navy); }
-.leader-card, .donation-card { padding: 26px; }
+.leader-card, .board-card, .donation-card { padding: 26px; }
+.board-card { display: flex; flex-direction: column; gap: 10px; }
+.board-card small { margin-top: auto; color: var(--green-dark); font-weight: 800; }
 .donation-tier-card { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; padding: 26px; }
 .donation-tier-card__amount { margin: 0; color: var(--muted-gold); font-family: Georgia, "Times New Roman", serif; font-size: 2.4rem; font-weight: 800; line-height: 1; }
 .donation-tier-card .button, .donation-card .button { margin-top: auto; }
 .leader-card p { margin: 0 0 6px; color: var(--muted-gold); font-weight: 900; text-transform: uppercase; }
+
+.impact-section { background: linear-gradient(180deg, #fbf8f1, #f3eee4); }
+.impact-metrics { display: grid; grid-template-columns: 1fr; gap: 16px; }
+.impact-metric { display: grid; gap: 6px; padding: 22px; border-radius: var(--radius); color: var(--deep-navy); background: var(--white); border: 1px solid rgba(16, 37, 56, 0.1); box-shadow: var(--shadow); }
+.impact-metric svg { color: var(--muted-gold); }
+.impact-metric strong { font-family: Georgia, "Times New Roman", serif; font-size: 2.15rem; line-height: 1; }
+.impact-metric span { color: var(--muted); font-weight: 800; }
 
 blockquote { max-width: 940px; margin: 0; padding: 30px; border-left: 5px solid var(--muted-gold); border-radius: 0 var(--radius) var(--radius) 0; color: var(--deep-navy); background: #fffaf0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.35rem, 3vw, 2.2rem); line-height: 1.35; box-shadow: var(--shadow); }
 blockquote cite { display: block; margin-top: 14px; color: var(--green-dark); font-family: Arial, Helvetica, sans-serif; font-size: 1rem; font-style: normal; font-weight: 800; }
@@ -91,11 +100,18 @@ blockquote cite { display: block; margin-top: 14px; color: var(--green-dark); fo
 .program-card__icon { display: grid; width: 52px; height: 52px; place-items: center; border-radius: 14px; color: var(--green-dark); background: #edf3ec; }
 .donation-card { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
 .contact-layout { display: grid; grid-template-columns: 1fr; gap: 24px; }
-.contact-form { display: grid; gap: 16px; padding: 24px; }
+.contact-form { display: grid; gap: 16px; padding: 24px; max-width: 820px; }
 .form-row { display: grid; gap: 7px; }
 .form-row label { color: var(--deep-navy); font-weight: 800; }
 .form-row input, .form-row select, .form-row textarea { width: 100%; border: 1px solid rgba(16, 37, 56, 0.18); border-radius: 12px; padding: 12px 14px; color: var(--ink); background: #fffdf8; }
 .form-row textarea { resize: vertical; }
+.checkbox-row { display: flex; align-items: flex-start; gap: 10px; color: var(--deep-navy); font-weight: 800; }
+.checkbox-row input { width: auto; margin-top: 5px; }
+.tag-list { display: flex; flex-wrap: wrap; gap: 10px; }
+.tag-list span { padding: 10px 14px; border-radius: 999px; color: var(--deep-navy); background: var(--white); border: 1px solid rgba(16, 37, 56, 0.12); font-weight: 800; }
+.devotional-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
+.devotional-card { padding: 26px; }
+.devotional-card strong { display: block; margin: 0 0 10px; color: var(--green-dark); }
 .contact-card { padding: 26px; }
 .contact-card h2 { margin: 0 0 16px; color: var(--deep-navy); font-family: Georgia, "Times New Roman", serif; }
 .contact-card p { display: flex; align-items: flex-start; gap: 10px; margin: 0 0 14px; color: var(--muted); }
@@ -113,11 +129,13 @@ blockquote cite { display: block; margin-top: 14px; color: var(--green-dark); fo
 .footer__scripture { margin-top: 16px; color: rgba(255, 255, 255, 0.88); font-family: Georgia, "Times New Roman", serif; }
 .footer__donate { margin-top: 18px; }
 .footer__bottom { display: grid; gap: 8px; padding-top: 28px; margin-top: 34px; border-top: 1px solid rgba(255, 255, 255, 0.14); font-size: 0.9rem; }
+.footer__legal { display: flex; flex-wrap: wrap; gap: 10px 16px; }
 
 @media (min-width: 720px) {
   .container { width: min(1120px, calc(100% - 56px)); }
-  .card-grid, .leader-grid, .donation-grid { grid-template-columns: repeat(3, 1fr); }
+  .card-grid, .leader-grid, .board-grid, .donation-grid { grid-template-columns: repeat(3, 1fr); }
   .card-grid--six { grid-template-columns: repeat(2, 1fr); }
+  .impact-metrics { grid-template-columns: repeat(2, 1fr); }
   .value-grid { grid-template-columns: repeat(2, 1fr); }
   .donation-grid { grid-template-columns: repeat(2, 1fr); }
   .two-column, .contact-layout, .split-panel, .cta__inner, .footer__grid { grid-template-columns: 1.25fr 0.75fr; }
@@ -131,6 +149,8 @@ blockquote cite { display: block; margin-top: 14px; color: var(--green-dark); fo
   .value-grid { grid-template-columns: repeat(3, 1fr); }
   .card-grid--six { grid-template-columns: repeat(3, 1fr); }
   .donation-grid { grid-template-columns: repeat(4, 1fr); }
+  .impact-metrics { grid-template-columns: repeat(5, 1fr); }
+  .devotional-grid { grid-template-columns: repeat(3, 1fr); }
   .footer__grid { grid-template-columns: 1.4fr 0.55fr 0.75fr; }
   .footer__bottom { grid-template-columns: 1fr 1fr; }
 }
