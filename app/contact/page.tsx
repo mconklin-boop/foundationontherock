@@ -1,2 +1,68 @@
-export const metadata = { title: "Contact", description: "Contact Foundation on the Rock for questions, partnerships, donations, or volunteer opportunities." };
-export default function ContactPage(){return <><section className="page-hero"><div className="container"><p className="eyebrow">Contact</p><h1>We would be grateful to hear from you</h1><p>Reach out with questions, partnership ideas, donation inquiries, or volunteer interest.</p></div></section><section className="section"><div className="container split"><form className="card contact-form"><label>Name<input name="name" placeholder="Your name" /></label><label>Email<input name="email" type="email" placeholder="you@example.com" /></label><label>Topic<select name="topic" defaultValue=""><option value="" disabled>Choose a topic</option><option>General question</option><option>Volunteer interest</option><option>Partnership inquiry</option><option>Donation inquiry</option></select></label><label>Message<textarea name="message" rows={6} placeholder="How can we help?" /></label><button className="button button-gold" type="button">Send Message</button></form><aside className="card"><h2>Contact details</h2><p>info@foundationontherock.org</p><p>Mailing address coming soon</p><p>Partnership and donation inquiries welcome.</p></aside></div></section></>}
+import type { Metadata } from "next";
+import { Globe2, Mail, MessagesSquare, Phone } from "lucide-react";
+import { ContactForm } from "@/components/ContactForm";
+import { PageHero } from "@/components/PageHero";
+import { Section } from "@/components/Section";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description:
+    "Contact Foundation on the Rock for general questions, partnerships, donations, or support inquiries."
+};
+
+export default function ContactPage() {
+  return (
+    <>
+      <PageHero
+        eyebrow="Contact"
+        title="Connect with Foundation on the Rock"
+        text="Reach out with questions, partnership ideas, donation inquiries, or ways to support the mission."
+      />
+
+      <Section title="Send a Message">
+        <div className="contact-layout">
+          <ContactForm />
+          <aside className="contact-card" aria-label="Contact details">
+            <h2>Contact details</h2>
+            <p>
+              <Phone size={18} aria-hidden="true" />
+              (720) 258-6272
+            </p>
+            <p>
+              <Mail size={18} aria-hidden="true" />
+              desiree@foundationontherock.org
+            </p>
+            <p>
+              <Globe2 size={18} aria-hidden="true" />
+              foundationontherock.org
+            </p>
+            <p>
+              <MessagesSquare size={18} aria-hidden="true" />
+              Partnership and donation inquiries are welcome.
+            </p>
+          </aside>
+        </div>
+      </Section>
+
+      <Section className="section--soft" title="Partnership and donation inquiries">
+        <div className="two-column">
+          <div>
+            <h3>Partnership inquiry</h3>
+            <p>
+              Churches, nonprofits, businesses, and community leaders can reach
+              out to begin a conversation about serving families together.
+            </p>
+          </div>
+          <div>
+            <h3>Donation inquiry</h3>
+            <p>
+              Donors and sponsors can reach out for giving questions,
+              stewardship information, or future program sponsorship
+              opportunities.
+            </p>
+          </div>
+        </div>
+      </Section>
+    </>
+  );
+}
