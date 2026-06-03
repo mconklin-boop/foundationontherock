@@ -540,7 +540,7 @@ textarea {
   font-weight: 900;
 }
 
-blockquote {
+.scripture-block {
   max-width: 940px;
   margin: 0;
   padding: 30px;
@@ -548,13 +548,22 @@ blockquote {
   border-radius: 0 var(--radius) var(--radius) 0;
   color: var(--deep-navy);
   background: #fffaf0;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1.35rem, 3vw, 2.2rem);
-  line-height: 1.35;
   box-shadow: var(--shadow);
 }
 
-blockquote cite {
+.scripture-block blockquote {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.scripture-block blockquote p {
+  margin: 0;
+  color: inherit;
+  font-size: clamp(1.35rem, 3vw, 2.2rem);
+  line-height: 1.35;
+}
+
+.scripture-block cite {
   display: block;
   margin-top: 14px;
   color: var(--green-dark);
@@ -562,6 +571,34 @@ blockquote cite {
   font-size: 1rem;
   font-style: normal;
   font-weight: 800;
+}
+
+.scripture-block figcaption {
+  max-width: 760px;
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.scripture-block--soft {
+  background: var(--white);
+}
+
+.scripture-block--gold {
+  background: #fff6dc;
+}
+
+.scripture-block--navy {
+  border-left-color: var(--muted-gold);
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+}
+
+.scripture-block--navy cite,
+.scripture-block--navy figcaption {
+  color: rgba(255, 255, 255, 0.78);
 }
 
 .program-list {
@@ -768,12 +805,6 @@ blockquote cite {
 
 .footer a:hover {
   color: var(--muted-gold);
-}
-
-.footer__scripture {
-  margin-top: 16px;
-  color: rgba(255, 255, 255, 0.88);
-  font-family: Georgia, "Times New Roman", serif;
 }
 
 .footer__donate {
