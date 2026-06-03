@@ -1,3 +1,4 @@
+// TODO: Replace with approved live donation/payment link.
 export const DONATION_URL = "#";
 
 export const contact = {
