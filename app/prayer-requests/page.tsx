@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { PrayerRequestForm } from "@/components/PrayerRequestForm";
+import { JotformEmbed } from "@/components/JotformEmbed";
 import { PageHero } from "@/components/PageHero";
 import { ScriptureBlock } from "@/components/ScriptureBlock";
 import { Section } from "@/components/Section";
+import { JOTFORM_PRAYER_REQUEST_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Prayer Requests",
@@ -21,13 +22,20 @@ export default function PrayerRequestsPage() {
 
       <Section title="How can we pray with you?">
         <div className="contact-layout">
-          <PrayerRequestForm />
+          <JotformEmbed
+            title="Foundation on the Rock prayer request form"
+            formUrl={JOTFORM_PRAYER_REQUEST_URL}
+          />
           <aside className="contact-card">
-            <h2>Prayer care</h2>
+            <h2>Private prayer care</h2>
             <p>
-              Prayer requests are treated with dignity and care. If you mark a
-              request private, it should be handled only by the appropriate
-              prayer support team once a secure backend is added.
+              Prayer requests submitted here are intended to be received
+              privately by Foundation on the Rock through Jotform. Please avoid
+              sharing sensitive emergency details if immediate help is needed.
+            </p>
+            <p>
+              If this is an urgent safety concern, call 911 or contact local
+              emergency services right away.
             </p>
           </aside>
         </div>
