@@ -7,7 +7,7 @@ import { Section } from "@/components/Section";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact Foundation on the Rock for general questions, partnerships, donations, or support inquiries."
+    "Contact Foundation on the Rock for partnerships, donor questions, volunteer interest, prayer support, and Christian outreach collaboration in Colorado."
 };
 
 export default function ContactPage() {
