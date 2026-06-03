@@ -7,6 +7,9 @@ const navItems = [
   { href: "/about", label: "About" },
   { href: "/programs", label: "Programs" },
   { href: "/donate", label: "Donate" },
+  { href: "/prayer-requests", label: "Prayer" },
+  { href: "/volunteer", label: "Volunteer" },
+  { href: "/devotionals", label: "Devotionals" },
   { href: "/contact", label: "Contact" }
 ];
 
