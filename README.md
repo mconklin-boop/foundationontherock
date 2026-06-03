@@ -51,7 +51,8 @@ npm run start
 ## Launch checklist
 
 - Replace `DONATION_URL` in `lib/site.ts` with the approved live donation or payment link.
-- Connect contact, prayer request, and volunteer forms to the selected backend, form service, CRM, or spreadsheet workflow.
+- Replace `JOTFORM_PRAYER_REQUEST_URL` in `lib/site.ts` with the live Jotform prayer request form URL.
+- Connect contact and volunteer forms to the selected backend, form service, CRM, or spreadsheet workflow.
 - Add real community outreach, volunteer service, family support, and devotional/blog photos.
 - Confirm EIN, nonprofit status, tax-deductibility, and charitable solicitation language.
 - Review Privacy Policy, Terms, and Donation Disclaimer with appropriate legal guidance.
